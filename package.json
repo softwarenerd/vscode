@@ -71,6 +71,8 @@
     "@microsoft/1ds-core-js": "^3.2.13",
     "@microsoft/1ds-post-js": "^3.2.13",
     "@parcel/watcher": "2.1.0",
+    "@types/react": "npm:types-react@19.0.0-rc.1",
+    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
     "@types/semver": "^7.5.8",
     "@vscode/deviceid": "^0.1.1",
     "@vscode/iconv-lite-umd": "0.7.0",
@@ -104,6 +106,8 @@
     "native-watchdog": "^1.4.1",
     "node-pty": "^1.1.0-beta22",
     "open": "^8.4.2",
+    "react": "^19.0.0-rc.1",
+    "react-dom": "^19.0.0-rc.1",
     "tas-client-umd": "0.2.0",
     "undici": "^6.20.1",
     "v8-inspect-profiler": "^0.1.1",
@@ -228,7 +232,9 @@
     },
     "@parcel/watcher@2.1.0": {
       "node-addon-api": "7.1.0"
-    }
+    },
+    "@types/react": "npm:types-react@19.0.0-rc.1",
+    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1"
   },
   "repository": {
     "type": "git",
@@ -239,5 +245,6 @@
   },
   "optionalDependencies": {
     "windows-foreground-love": "0.5.0"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }

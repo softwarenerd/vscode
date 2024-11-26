@@ -203,6 +203,19 @@
 			};
 
 			const importMap: { imports: Record<string, string> } = { imports: {} };
+
+			// HERE BRIAN
+			// importMap.imports['react'] = new URL('vscode-file://vscode-app/Users/brian/Experiment/vscode/react-stuff/react.js').href;
+			// importMap.imports['react-dom'] = new URL('vscode-file://vscode-app/Users/brian/Experiment/vscode/react-stuff/react-dom.js').href;
+			// importMap.imports['react-dom/client'] = new URL('vscode-file://vscode-app/Users/brian/Experiment/vscode/react-stuff/react-dom/client.js').href;
+
+			const a = new URL('https://esm.sh/react@19.0.0-rc.1').href;
+			const b = new URL('https://esm.sh/react-dom@19.0.0-rc.1').href;
+			const c = new URL('https://esm.sh/react-dom@19.0.0-rc.1/client').href;
+			importMap.imports['react'] = a;
+			importMap.imports['react-dom'] = b;
+			importMap.imports['react-dom/client'] = c;
+
 			for (const cssModule of configuration.cssModules) {
 				const cssUrl = new URL(cssModule, baseUrl).href;
 				const jsSrc = `globalThis._VSCODE_CSS_LOAD('${cssUrl}');\n`;

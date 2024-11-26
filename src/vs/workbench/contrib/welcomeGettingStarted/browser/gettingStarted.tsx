@@ -3,6 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
+// REACT!!!!!
+import React from 'react'
+import { createRoot, Root } from 'react-dom/client';
+import { TestComponent } from './testComponent.js';
+// REACT!!!!!
+
 import { $, Dimension, addDisposableListener, append, clearNode, reset } from '../../../../base/browser/dom.js';
 import { renderFormattedText } from '../../../../base/browser/formattedTextRenderer.js';
 import { StandardKeyboardEvent } from '../../../../base/browser/keyboardEvent.js';
@@ -829,9 +835,20 @@ export class GettingStartedPage extends EditorPane {
 			onShowOnStartupChanged();
 		}));
 
+		// HERE BRIAN
+		const container = document.createElement('div');
+		container.style.width = '400px';
+		container.style.height = '100px';
+		container.style.backgroundColor = 'yellow';
+
+		// Create the root.
+		const root: Root = createRoot(container);
+		root.render(<TestComponent />);
+
 		const header = $('.header', {},
 			$('h1.product-name.caption', {}, this.productService.nameLong),
-			$('p.subtitle.description', {}, localize({ key: 'gettingStarted.editingEvolved', comment: ['Shown as subtitle on the Welcome page.'] }, "Editing evolved"))
+			$('p.subtitle.description', {}, localize({ key: 'gettingStarted.editingEvolved', comment: ['Shown as subtitle on the Welcome page.'] }, "Editing evolved")),
+			container
 		);
 
 		const leftColumn = $('.categories-column.categories-column-left', {},);
